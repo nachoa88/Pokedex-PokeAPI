@@ -1,3 +1,4 @@
-# pokedex
-Pokedex using PokéAPI built in React.
-=======
+# Pokedex
+
+#### Pokedex using PokéAPI built in React.
+
