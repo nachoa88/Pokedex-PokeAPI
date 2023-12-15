@@ -1,82 +1,91 @@
+import { useContext } from "react";
+import { PokemonContext } from "../context/PokemonContext";
+
+
 import "./css/FilterBar.css"
 
+
 function FilterBar() {
+    
+    const {active} = useContext(PokemonContext);
+
     return (
-        <div className="container-filters">
+        // En caso de que el useContext diga que está active, agregrá "active" al tipo de clase para hacer aparecer la barra de filtros.
+        <div className={`container-filters ${active ? 'active' : '' }`}>
             <div className="filter-by-type">
                 <span>Type</span>
 
                 <div className="group-type">
                     <input type="checkbox" name="grass" id="grass" />
-                    <label for="grass">Grass</label>
+                    <label htmlFor="grass">Grass</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="fire" id="fire" />
-                    <label for="fire">Fire</label>
+                    <label htmlFor="fire">Fire</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="bug" id="bug" />
-                    <label for="bug">Bug</label>
+                    <label htmlFor="bug">Bug</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="fairy" id="fairy" />
-                    <label for="fairy">Fairy</label>
+                    <label htmlFor="fairy">Fairy</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="dragon" id="dragon" />
-                    <label for="dragon">Dragon</label>
+                    <label htmlFor="dragon">Dragon</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="shadow" id="shadow" />
-                    <label for="shadow">Shadow</label>
+                    <label htmlFor="shadow">Shadow</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="ground" id="ground" />
-                    <label for="ground">Ground</label>
+                    <label htmlFor="ground">Ground</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="normal" id="normal" />
-                    <label for="normal">Normal</label>
+                    <label htmlFor="normal">Normal</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="psychic" id="psychic" />
-                    <label for="psychic">Psychic</label>
+                    <label htmlFor="psychic">Psychic</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="steel" id="steel" />
-                    <label for="steel">Steel</label>
+                    <label htmlFor="steel">Steel</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="dark" id="dark" />
-                    <label for="dark">Dark</label>
+                    <label htmlFor="dark">Dark</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="electric" id="electric" />
-                    <label for="electric">Electric</label>
+                    <label htmlFor="electric">Electric</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="fighting" id="fighting" />
-                    <label for="fighting">Fighting</label>
+                    <label htmlFor="fighting">Fighting</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="flying" id="flying" />
-                    <label for="flying">Flying</label>
+                    <label htmlFor="flying">Flying</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="ice" id="ice" />
-                    <label for="ice">Ice</label>
+                    <label htmlFor="ice">Ice</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="poison" id="poison" />
-                    <label for="poison">Poison</label>
+                    <label htmlFor="poison">Poison</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="rock" id="rock" />
-                    <label for="rock">Rock</label>
+                    <label htmlFor="rock">Rock</label>
                 </div>
                 <div className="group-type">
                     <input type="checkbox" name="water" id="water" />
-                    <label for="water">Water</label>
+                    <label htmlFor="water">Water</label>
                 </div>
             </div>
         </div>
