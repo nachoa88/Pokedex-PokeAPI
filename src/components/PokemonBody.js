@@ -1,26 +1,38 @@
 import "./css/PokemonBody.css"
 
-function PokemonBody() {
+function PokemonBody({ pokemon }) {
+    
+    const primerMayuscula = (word) => {
+        return word[0].toUpperCase() + word.substring(1)
+    }
+    
     return (
-        <div className="header-main-pokemon">
-            <span className="number-pokemon">#1</span>
-            <div className="container-img-pokemon">
-                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="pokemon bulbasaur" />
+        <div className='header-main-pokemon'>
+            <span className='number-pokemon'>#{pokemon.id}</span>
+            <div className='container-img-pokemon'>
+                <img
+                    src={pokemon.sprites.other.dream_world.front_default}
+                    alt={`Pokemon ${pokemon?.name}`}
+                />
             </div>
 
-            <div className="container-info-pokemon">
-                <h1>Bulbasaur</h1>
-                <div className="card-types">
-                    <span className="grass">Grass</span>
+            <div className='container-info-pokemon'>
+                <h1>{primerMayuscula(pokemon.name)}</h1>
+                <div className='card-types info-pokemon-type'>
+                    {pokemon.types.map(type => (
+                        <span key={type.type.name} className={`${type.type.name}`}>
+                            {type.type.name}
+                        </span>
+                    ))}
                 </div>
-                <div className="info-pokemon">
-                    <div className="group-info">
-                        <p>Height</p>
-                        <span>0.7m</span>
+                <div className='info-pokemon'>
+                    <div className='group-info'>
+                        <p>Altura</p>
+                        <span>{pokemon.height}</span>
                     </div>
-                    <div className="group-info">
-                        <p>Weight</p>
-                        <span>6.9Kg</span>
+                    <div className='group-info'>
+                        <p>Peso</p>
+                        <span>{pokemon.weight}KG</span>
                     </div>
                 </div>
             </div>
