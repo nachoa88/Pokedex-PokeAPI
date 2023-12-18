@@ -8,7 +8,8 @@ function PokemonCard({ pokemon }) {
 		<Link to={`/pokemon/${pokemon.id}`} className='card-pokemon'>
 			<div className='card-img'>
 				<img
-					src={pokemon.sprites.other.dream_world.front_default}
+					// como es JavaScript, no se puede poner 'official-artwork' sin más porque el guión da problemas, otras img serían: other.dream_world.front_default
+					src={pokemon.sprites.other['official-artwork'].front_default}
 					alt={`Pokemon ${pokemon.name}`}
 				/>
 			</div>
