@@ -11,7 +11,7 @@ function PokemonBody({ pokemon }) {
             <span className='number-pokemon'>#{pokemon.id}</span>
             <div className='container-img-pokemon'>
                 <img
-                    src={pokemon.sprites.other.dream_world.front_default}
+                    src={pokemon.sprites.other['official-artwork'].front_default}
                     alt={`Pokemon ${pokemon?.name}`}
                 />
             </div>
