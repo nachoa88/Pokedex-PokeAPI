@@ -2,6 +2,10 @@ import "./css/PokemonBody.css"
 
 function PokemonBody({ pokemon }) {
     
+    if (!pokemon) {
+        return null; // Or a loading spinner
+    }
+
     const primerMayuscula = (word) => {
         return word[0].toUpperCase() + word.substring(1)
     }

@@ -1,4 +1,4 @@
-.container-btn-load-more{
+.container-button-load-more{
 	display: flex;
 	justify-content: center;
 
@@ -6,7 +6,7 @@
 	margin-top: 20px;
 }
 
-.btn-load-more{
+.button-load-more{
 	border: none;
 	padding: 15px 40px;
 	font-family: inherit;
@@ -16,7 +16,7 @@
 	cursor: pointer;
 }
 
-.btn-load-more:hover{
+.button-load-more:hover{
 	background-color: var(--color-primary-hover);
 	color: #000;
 }
