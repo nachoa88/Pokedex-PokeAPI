@@ -19,18 +19,22 @@ function PokemonCard({ pokemon }) {
 	
 	// If the details are not fetched yet the Loader componet.
 	if (!details) {
-		return <Loader />; // Or a loading spinner
+		return <Loader />;
 	}
+
+	const primerMayuscula = (word) => {
+        return word[0].toUpperCase() + word.substring(1)
+    }
 
 	return (
 		<Link to={`/pokemon/${details.name}`} className='card-pokemon'>
 			<div className='card-img'>
-				{/*como es JavaScript, no se puede poner 'official-artwork' sin más porque el guión da problemas, otras img serían: other.dream_world.front_default*/}
+				{/*In JavaScript, we cannot write 'official-artwork' because '-' gives problems, other sprites: other.dream_world.front_default*/}
 				<img src={details.sprites.other['official-artwork'].front_default} alt={`Pokemon ${pokemon.name}`} />
 			</div>
 			<div className='card-info'>
 				<span className='pokemon-id'>N° {details.id}</span>
-				<h3>{details.name}</h3>
+				<h3>{primerMayuscula(details.name)}</h3>
 				<div className='card-types'>
 					{details.types.map(type => (
 						<span key={type.type.name} className={type.type.name}>
