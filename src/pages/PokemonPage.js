@@ -1,45 +1,30 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
-import PokemonBody from '../components/PokemonBody.js';
-import PokemonStats from '../components/PokemonStats.js';
-
-import { PokemonContext } from '../context/PokemonContext.js';
 import { Loader } from '../components/Loader.js';
-// import { primerMayuscula } from '../helper/helper';
-
+import PokemonBody from "../components/PokemonBody";
+import PokemonStats from "../components/PokemonStats";
 
 function PokemonPage() {
-    const { getPokemonByID } = useContext(PokemonContext);
-
-    const [loading, setLoading] = useState(true);
-    const [pokemon, setPokemon] = useState({});
-
-    const { id } = useParams();
-
-    const fetchPokemon = async id => {
-        const data = await getPokemonByID(id);
-        setPokemon(data);
-        setLoading(false);
-    };
+    const { pokemonName } = useParams();
+    const [pokemonData, setPokemonData] = useState(null);
 
     useEffect(() => {
-        fetchPokemon(id);
-    }, []);
+        if (!pokemonData) {
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+                .then(response => response.json())
+                .then(data => setPokemonData(data));
+        }
+    }, [pokemonName, pokemonData]);
+
+    if (!pokemonData) {
+        return <Loader />;
+    }
 
     return (
-
         <main className="container main-pokemon">
-            {loading ? (
-                <Loader />
-            ) : (
-                <>
-                    <PokemonBody pokemon={pokemon} />
-                    <PokemonStats pokemon={pokemon} />
-                </>
-            )}
+            <PokemonBody pokemonData={pokemonData} />
+            <PokemonStats pokemonData={pokemonData} />
         </main>
-        
     );
 }
 

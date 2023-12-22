@@ -1,25 +1,28 @@
+import { Loader } from "./Loader";
+
 import "./css/PokemonBody.css"
 
-function PokemonBody({ pokemon }) {
-    
+function PokemonBody({ pokemonData }) {
+
+    if (!pokemonData) {
+		return <Loader />;
+	}
+
     const primerMayuscula = (word) => {
         return word[0].toUpperCase() + word.substring(1)
     }
-    
+
     return (
         <div className='header-main-pokemon'>
-            <span className='number-pokemon'>#{pokemon.id}</span>
+            <span className='number-pokemon'>#{pokemonData.id}</span>
             <div className='container-img-pokemon'>
-                <img
-                    src={pokemon.sprites.other['official-artwork'].front_default}
-                    alt={`Pokemon ${pokemon?.name}`}
-                />
+                <img src={pokemonData.sprites.other['official-artwork'].front_default}
+                    alt={`Pokemon ${pokemonData?.name}`} />
             </div>
-
             <div className='container-info-pokemon'>
-                <h1>{primerMayuscula(pokemon.name)}</h1>
+                <h1>{primerMayuscula(pokemonData.name)}</h1>
                 <div className='card-types info-pokemon-type'>
-                    {pokemon.types.map(type => (
+                    {pokemonData.types.map(type => (
                         <span key={type.type.name} className={`${type.type.name}`}>
                             {type.type.name}
                         </span>
@@ -27,12 +30,12 @@ function PokemonBody({ pokemon }) {
                 </div>
                 <div className='info-pokemon'>
                     <div className='group-info'>
-                        <p>Altura</p>
-                        <span>{pokemon.height}</span>
+                        <p>Height</p>
+                        <span>{pokemonData.height}</span>
                     </div>
                     <div className='group-info'>
-                        <p>Peso</p>
-                        <span>{pokemon.weight}KG</span>
+                        <p>Weight</p>
+                        <span>{pokemonData.weight}KG</span>
                     </div>
                 </div>
             </div>

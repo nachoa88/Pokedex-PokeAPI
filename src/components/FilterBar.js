@@ -1,15 +1,14 @@
-import { useContext } from "react";
-import { PokemonContext } from "../context/PokemonContext";
+import React, { useContext } from "react";
+import { PokemonContext } from "../contexts/PokemonProvider.js";
 
 import "./css/FilterBar.css"
 
 function FilterBar() {
-    
-    const {active, handleCheckbox} = useContext(PokemonContext);
+    const { handleCheckbox } = useContext(PokemonContext);
 
     return (
         // En caso de que el useContext diga que está active, agregrá "active" al tipo de clase para hacer aparecer la barra de filtros.
-        <div className={`container-filters ${active ? 'active' : '' }`}>
+        <div className="container-filters">
             <div className="filter-by-type">
                 <span>Type</span>
 

@@ -1,17 +1,18 @@
+import { PokemonProvider } from './contexts/PokemonProvider.js';
 import Routing from './routing/Routing.js';
-
-import PokemonProvider from './context/PokemonProvider.js';
 
 import './App.css';
 
 
 function App() {
+
   return (
-    <PokemonProvider>
-      <Routing />
-    </PokemonProvider>
-
-
+    <div className="App">
+      {/*We use PokemonProvider to pass the information of the pokemons from the API to the childs*/}
+      <PokemonProvider>
+        <Routing />
+      </PokemonProvider>
+    </div>
   );
 }
 

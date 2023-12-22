@@ -1,19 +1,23 @@
-import FilterBtn from '../components/FilterBtn.js';
-import PokemonList from '../components/PokemonList.js';
-import FilterBar from '../components/FilterBar.js';
-import LoadMoreBtn from '../components/LoadMoreBtn.js';
+import React, { useState } from 'react';
 
+import PokemonList from '../components/PokemonList.js';
+import LoadMoreButton from '../components/LoadMoreButton.js';
+import FilterButton from '../components/FilterButton.js';
+import FilterBar from '../components/FilterBar.js';
 
 function HomePage() {
-    
+    const [showFilterBar, setShowFilterBar] = useState(false);
+
+    const toggleFilterBar = () => {
+        setShowFilterBar(!showFilterBar);
+    };
+
     return (
         <>
-            
-            <FilterBtn />
+            <FilterButton onClick={toggleFilterBar} />
+            {showFilterBar && <FilterBar />}
             <PokemonList />
-            <FilterBar />
-            <LoadMoreBtn />
-
+            <LoadMoreButton />
         </>
     );
 }
