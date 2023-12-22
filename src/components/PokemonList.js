@@ -8,7 +8,7 @@ const PokemonList = () => {
     return (
         <div className="card-list-pokemon container">
             {displayedPokemons.map((pokemon) => (
-                <PokemonCard key={pokemon.url} pokemon={pokemon} />
+                <PokemonCard key={pokemon.id} pokemon={pokemon} />
             ))}
         </div>
     );

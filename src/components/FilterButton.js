@@ -1,5 +1,3 @@
-
-
 import "./css/FilterButton.css"
 
 function FilterButton({ onClick }) {
