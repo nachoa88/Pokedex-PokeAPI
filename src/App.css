@@ -27,13 +27,6 @@
     --color-primary-hover: #83c5be;
 }
 
-/* '*' IS AN UNIVERSAL SELECTOR */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Montserrat';
 }

@@ -15,7 +15,7 @@ function HomePage() {
     return (
         <>
             <FilterButton onClick={toggleFilterBar} />
-            {showFilterBar && <FilterBar />}
+            {showFilterBar && <FilterBar onClick={toggleFilterBar}/>}
             <PokemonList />
             <LoadMoreButton />
         </>

@@ -6,7 +6,7 @@ const PokemonList = () => {
     const { displayedPokemons } = useContext(PokemonContext);
 
     return (
-        <div className="card-list-pokemon container">
+        <div className="container row">
             {displayedPokemons.map((pokemon) => (
                 <PokemonCard key={pokemon.id} pokemon={pokemon} />
             ))}

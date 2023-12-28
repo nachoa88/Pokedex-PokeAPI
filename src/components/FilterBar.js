@@ -3,13 +3,16 @@ import { PokemonContext } from "../contexts/PokemonProvider.js";
 
 import "./css/FilterBar.css"
 
-function FilterBar() {
+function FilterBar({ onClick }) {
     const { handleCheckbox } = useContext(PokemonContext);
 
     return (
         // En caso de que el useContext diga que está active, agregrá "active" al tipo de clase para hacer aparecer la barra de filtros.
         <div className="container-filters">
             <div className="filter-by-type">
+                <button onClick={onClick} className="closeButton" aria-label="Close Sidebar">
+                    <i className="fa fa-times fa-lg" aria-hidden="true"></i>
+                </button>
                 <span>Type</span>
 
                 <div className="group-type">
