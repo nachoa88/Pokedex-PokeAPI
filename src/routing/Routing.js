@@ -6,6 +6,7 @@ import { Loader } from '../components/Loader.js';
 import Header from "../components/Header.js";
 import HomePage from '../pages/HomePage.js';
 import PokemonPage from "../pages/PokemonPage.js";
+import Footer from '../components/Footer.js';
 
 function Routing() {
     // We use the useContext hook to know if it's loading or not, so we can show the Loader component.
@@ -22,6 +23,7 @@ function Routing() {
                 <Route path='/' element={<HomePage />} />
                 <Route path='/pokemon/:pokemonName' element={<PokemonPage />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 }

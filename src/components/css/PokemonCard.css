@@ -1,125 +1,128 @@
-.card-list-pokemon{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+#card-body {
+    padding: 5px;
+    text-decoration: none;
 }
 
 .card-pokemon {
     cursor: pointer;
-    text-decoration: none;
-}
-
-.card-img{
-    background-color: #f2f2f2;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid #f2f2f2;
     border-radius: 5px;
-    height: 250px;
+    background-color: #2c2c2c;
 }
 
-.card-img img{
+.card-img {
+    background-color: #f2f2f2;
+    border-radius: 0px;
+}
+
+.card-img img {
     width: 100%;
     height: 100%;
 }
 
-.card-info{
-    padding: 15px;
+.card-info {
+    padding: 10px;
+    color: #f2f2f2;
 }
 
-.card-info h3{
-    color: #333;
-}
-
-.pokemon-id{
-    display: block;
-    color: #888;
+.pokemon-name {
+    margin-top: 5px;
     margin-bottom: 15px;
+    text-align: right;
+    font-size: large;
 }
 
-.card-types{
+.pokemon-id {
+    margin: 0;
+    text-align: right;
+    color: #f2f2f2;
+    font-size:medium
+}
+
+.card-types {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    justify-content: space-between;
 }
 
-.card-types span{
-    font-size: 12px;
-    padding: 5px 20px;
+.card-types span {
+    flex: 1 0 45%;
+    font-size: small;
+    padding: 5px;
+    text-align: center;
     border-radius: 5px;
-    color: #fff;
+    color: #f2f2f2;
+    margin: 0 2.5%;
 }
 
 /* Types of Pokemon */
 .water {
-	background-color: var(--color-water);
+    background-color: var(--color-water);
 }
 
 .grass {
-	background-color: var(--color-grass);
+    background-color: var(--color-grass);
 }
 
 .poison {
-	background-color: var(--color-poison);
+    background-color: var(--color-poison);
 }
 
 .fire {
-	background-color: var(--color-fire);
+    background-color: var(--color-fire);
 }
 
 .bug {
-	background-color: var(--color-bug);
+    background-color: var(--color-bug);
 }
 
 .dragon {
-	background: var(--color-dragon);
+    background: var(--color-dragon);
 }
 
 .flying {
-	background-color: var(--color-flying);
+    background-color: var(--color-flying);
 }
 
 .ground {
-	background-color: var(--color-ground);
+    background-color: var(--color-ground);
 }
 
 .steel {
-	background-color: var(--color-steel);
+    background-color: var(--color-steel);
 }
 
 .psychic {
-	background-color: var(--color-psychic);
+    background-color: var(--color-psychic);
 }
 
 .ice {
-	background-color: var(--color-ice);
+    background-color: var(--color-ice);
 }
 
 .ghost {
-	background-color: var(--color-ghost);
+    background-color: var(--color-ghost);
 }
 
 .normal {
-	background-color: var(--color-normal);
+    background-color: var(--color-normal);
 }
 
 .rock {
-	background-color: var(--color-rock);
+    background-color: var(--color-rock);
 }
 
 .electric {
-	background-color: var(--color-electric);
+    background-color: var(--color-electric);
 }
 
 .fighting {
-	background-color: var(--color-fighting);
+    background-color: var(--color-fighting);
 }
 
 .fairy {
-	background-color: var(--color-fairy);
+    background-color: var(--color-fairy);
 }
 
 .dark {
-	background-color: var(--color-dark);
+    background-color: var(--color-dark);
 }

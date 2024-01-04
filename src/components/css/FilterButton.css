@@ -1,18 +1,46 @@
-.container-filter{
+.container-filter {
     display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
-.icon-filter{
+.icon-filter {
     display: flex;
     align-items: center;
     gap: 15px;
-
-    margin-bottom: 20px;
-    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    background-color: var(--color-primary);
+    color: #f2f2f2;
+	cursor: pointer;
 }
 
-.icon-filter .icon{
+
+.icon-filter:hover {
+    background-color: var(--color-primary-hover);
+    border-radius: 25px;
+    color: black;
+}
+
+.icon-filter .icon {
     width: 30px;
     height: 30px;
-    stroke: #555;
+    stroke: #f2f2f2;
+}
+
+.icon-filter:hover .icon {
+    stroke: black;
+}
+
+@media (max-width: 767px) {
+    .icon-filter {
+        font-size: large;
+    }
+
+    .icon-filter .icon {
+        width: 40px;
+        height: 40px;
+    }
 }

@@ -6,8 +6,9 @@ import FilterButton from '../components/FilterButton.js';
 import FilterBar from '../components/FilterBar.js';
 
 function HomePage() {
+    // Set the state of the filter bar to false
     const [showFilterBar, setShowFilterBar] = useState(false);
-
+    // Toggle the state of the filter bar
     const toggleFilterBar = () => {
         setShowFilterBar(!showFilterBar);
     };
@@ -15,7 +16,7 @@ function HomePage() {
     return (
         <>
             <FilterButton onClick={toggleFilterBar} />
-            {showFilterBar && <FilterBar />}
+            <FilterBar onClick={toggleFilterBar} isActive={showFilterBar}/>
             <PokemonList />
             <LoadMoreButton />
         </>

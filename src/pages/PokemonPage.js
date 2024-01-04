@@ -21,10 +21,10 @@ function PokemonPage() {
     }
 
     return (
-        <main className="container main-pokemon">
+        <>
             <PokemonBody pokemonData={pokemonData} />
             <PokemonStats pokemonData={pokemonData} />
-        </main>
+        </>
     );
 }
 

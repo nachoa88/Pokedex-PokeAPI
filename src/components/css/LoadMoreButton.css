@@ -1,22 +1,21 @@
-.container-button-load-more{
+.container-button-load-more {
 	display: flex;
 	justify-content: center;
-
-	margin-bottom: 20px;
-	margin-top: 20px;
+	padding: 20px;
 }
 
-.button-load-more{
+.button-load-more {
 	border: none;
-	padding: 15px 40px;
+	border-radius: 25px;
+    padding: 15px 30px;
+	letter-spacing: 2px;
 	font-family: inherit;
 	background-color: var(--color-primary);
-	color: #fff;
-	border-radius: 10px;
+	color: #f2f2f2;
 	cursor: pointer;
 }
 
-.button-load-more:hover{
+.button-load-more:hover {
 	background-color: var(--color-primary-hover);
-	color: #000;
+	color: #000000;
 }

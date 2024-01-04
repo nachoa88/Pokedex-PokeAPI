@@ -7,7 +7,7 @@ export const PokemonProvider = ({ children }) => {
     // Loading is the state that will be used to know if the data is being loaded.
     const [loading, setLoading] = useState(true);
     // Offset is the number of pokemons that will be displayed in the screen.
-    const [offset, setOffset] = useState(20);
+    const [offset, setOffset] = useState(36);
     // Pokemons is the state that will be used to store the data from the API.
     const [pokemons, setPokemons] = useState([]);
     // DisplayedPokemons is used to store the pokemons that will be displayed in the screen, not all the pokemons loaded are being displayed.
@@ -46,7 +46,7 @@ export const PokemonProvider = ({ children }) => {
         if (!loading) {
             setLoading(true);
             setOffset(prevOffset => {
-                const newOffset = prevOffset + 20;
+                const newOffset = prevOffset + 36;
                 setDisplayedPokemons(pokemons.slice(0, newOffset));
                 setLoading(false);
                 return newOffset;

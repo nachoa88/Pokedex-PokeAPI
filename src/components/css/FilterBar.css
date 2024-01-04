@@ -1,34 +1,53 @@
 .container-filters {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -250px;
     width: 250px;
     color: #555;
     background-color: #f2f2f2;
     height: 100%;
-    padding-top: 140px;
-    transition: all .3s linear;
+    z-index: 1000; /*This is to put the Bar on top of the rest of elements*/
+    transition: left 1s ease;
 }
+
+.container-filters.active {
+    left: 0;
+}
+
+
+.closeButton {
+    padding: 15px;
+    background: none;
+    border: none;
+    align-self: flex-start;
+    margin-left: auto;
+    color: #555;
+}
+
 
 .filter-by-type {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .filter-by-type span {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .group-type {
     display: flex;
     gap: 10px;
-    margin-left: 15px;
+    margin-bottom: 5px;
 }
 
 .group-type label {
+    margin: 0px;
     cursor: pointer;
 }
