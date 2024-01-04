@@ -20,13 +20,13 @@ function Header() {
     return (
         <header className="container" >
             <div className="row">
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-sm-6 logo-col">
                     {/*We use a href because we want the HomePage to be reloaded fully, in the first state when app runs. Link mantains the state of application. */}
                     <a href="/" className="logo">
                         <img src="img/pokedex_logo.png" alt="Logo Pokedex"></img>
                     </a>
                 </div>
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-sm-6 form-col">
                     <form onSubmit={handleSearchSubmit}>
                         <div className="form-group">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="icon-search">
