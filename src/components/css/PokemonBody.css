@@ -1,22 +1,51 @@
+.button-next-previous {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-next-previous button {
+	border: none;
+	border-radius: 25px;
+    padding: 15px 30px;
+	letter-spacing: 2px;
+	font-family: inherit;
+	background-color: var(--color-primary);
+	color: #f2f2f2;
+	cursor: pointer;
+}
+
+.button-next-previous button:hover {
+	background-color: var(--color-primary-hover);
+	color: #000000;
+}
+
+.button-next-previous button:disabled {
+	background-color: var(--color-primary-hover);
+	color: #000000;
+}
+
 .pokemon-number {
-    font-size: 180px;
+    font-size: 20vw;
+    font-size: clamp(24px, 20vw, 180px); /* New line: font size will be at least 24px and at most 180px */
     font-weight: 700;
     color: var(--color-primary);
     opacity: 70%;
-    position: absolute;
-    z-index: -1;
-    line-height: 1;
-    margin-top: 20px;
-    left: 50%; /*This is to center the number*/
-    transform: translate(-50%); /*This to correct the centering*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .pokemon-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px;
 }
 
 .pokemon-img img {
-    width: 75%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .pokemon-description {
@@ -52,14 +81,6 @@
 
 /*FOR MOBILE SCREENS*/
 @media (max-width: 767px) {
-
-    .pokemon-number {
-        top: 45%;
-        transform: translate(-50%, -45%);
-        font-size: 120px;
-        font-weight: 700;
-    }
-    
     .pokemon-img,
     .pokemon-description {
         display: flex;

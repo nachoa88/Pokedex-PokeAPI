@@ -2,8 +2,7 @@ import { Loader } from "./Loader";
 
 import "./css/PokemonBody.css"
 
-function PokemonBody({ pokemonData }) {
-
+function PokemonBody({ pokemonData, loadNextPokemon, loadPreviousPokemon }) {
     if (!pokemonData) {
         return <Loader />;
     }
@@ -14,16 +13,21 @@ function PokemonBody({ pokemonData }) {
 
     return (
         <div className="container pokemon-top">
-            {/* The number of the pokemon is converted to String and, if it is less than 3 digits, it's filled with zeros */}
-            <span className="pokemon-number">#{String(pokemonData.id).padStart(3, '0')}</span>
+            <div className="button-next-previous">
+                <button onClick={loadPreviousPokemon} disabled={pokemonData.id <= 1}>Previous</button>
+                <button onClick={loadNextPokemon}>Next</button>
+            </div>
 
             <div className="row">
                 <div className="col-12 col-sm-6 order-sm-2 pokemon-img">
                     <img src={pokemonData.sprites.other['official-artwork'].front_default}
                         alt={`Pokemon ${pokemonData?.name}`} />
+
                 </div>
-                
+
                 <div className="col-12 col-sm-6 order-sm-1 pokemon-description">
+                    {/* The number of the pokemon is converted to String and, if it is less than 3 digits, it's filled with zeros */}
+                    <span className="pokemon-number">#{String(pokemonData.id).padStart(3, '0')}</span>
                     <h1 className="pokemon-page-name">{primerMayuscula(pokemonData.name)}</h1>
                     {/*We get the css style from the crads in the PokemonCard component*/}
                     <div className="card-types">
@@ -45,7 +49,6 @@ function PokemonBody({ pokemonData }) {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
