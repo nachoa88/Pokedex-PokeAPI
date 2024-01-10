@@ -4,7 +4,7 @@ function PokemonStats({ pokemonData }) {
 
     return (
         <div className="container pokemon-bottom">
-            <h2>Stats</h2>
+            <p className="stats-title">Stats</p>
             <div className="pokemon-stats">
                 <div className="stat-group">
                     <span>Hp</span>
@@ -28,14 +28,14 @@ function PokemonStats({ pokemonData }) {
                     <span className="counter-stat">{pokemonData.stats[2].base_stat}</span>
                 </div>
                 <div className="stat-group">
-                    <span>Special Attack</span>
+                    <span>Sp. Attack</span>
                     <div className="progress-bar" >
                         <div className="progress-bar-filled" style={{ width: `${(pokemonData.stats[3].base_stat / 255) * 100}%` }}></div>
                     </div>
                     <span className="counter-stat">{pokemonData.stats[3].base_stat}</span>
                 </div>
                 <div className="stat-group">
-                    <span>Special Defense</span>
+                    <span>Sp. Defense</span>
                     <div className="progress-bar" >
                         <div className="progress-bar-filled" style={{ width: `${(pokemonData.stats[4].base_stat / 255) * 100}%` }}></div>
                     </div>

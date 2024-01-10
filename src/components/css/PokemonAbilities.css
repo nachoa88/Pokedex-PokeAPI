@@ -1,0 +1,59 @@
+.container.pokemon-middle {
+    max-width: 800px;
+    margin-bottom: 50px;
+    width: 95%;
+}
+
+.pokemon-middle {
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
+    flex-direction: column;
+}
+
+.ability-types {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ability-types span {
+    flex: 1 0 25%;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #f2f2f2;
+    margin: 0 2.5%;
+}
+
+.experience-text {
+    font-size: larger;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ability-title {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
+@media (max-width: 576px) { /* adjust breakpoint as needed */
+    .ability-title {
+        margin-bottom: 10px;
+    }
+    
+    .ability-types {
+        flex-direction: column;
+    }
+
+    .ability-types span {
+        flex-basis: 100%; /*This make the item to occupy 100% of the space.*/
+        margin-bottom: 10px;
+    }
+}

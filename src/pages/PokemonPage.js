@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Loader } from '../components/Loader.js';
 import PokemonBody from "../components/PokemonBody";
+import PokemonAbilities from '../components/PokemonAbilities.js';
 import PokemonStats from "../components/PokemonStats";
 
 function PokemonPage() {
@@ -37,6 +38,7 @@ function PokemonPage() {
     return (
         <>
             <PokemonBody pokemonData={pokemonData} loadNextPokemon={loadNextPokemon} loadPreviousPokemon={loadPreviousPokemon} />
+            <PokemonAbilities pokemonData={pokemonData} />
             <PokemonStats pokemonData={pokemonData} />
         </>
     );

@@ -6,13 +6,14 @@
 
 .button-load-more {
 	border: none;
-	border-radius: 25px;
-    padding: 15px 30px;
+	border-radius: 20px;
+    padding: 10px 30px;
 	letter-spacing: 2px;
 	font-family: inherit;
 	background-color: var(--color-primary);
 	color: #f2f2f2;
 	cursor: pointer;
+	height: 50px;
 }
 
 .button-load-more:hover {

@@ -1,7 +1,23 @@
+.container.pokemon-bottom {
+    max-width: 800px;
+    margin-bottom: 50px;
+    width: 95%;
+}
+
+.stats-title {
+    font-size: x-large;
+    margin-left: 15px;
+}
+
 .pokemon-bottom {
     display: flex;
     gap: 50px;
     align-items: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
 }
 
 .pokemon-stats {
@@ -9,14 +25,13 @@
     flex-direction: column;
     gap: 20px;
     flex: 1;
-    margin-bottom: 50px;
 }
 
 .stat-group {
     display: grid;
     align-items: center;
     gap: 20px;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 20% auto 8%;
 }
 
 .stat-group span {
@@ -26,7 +41,7 @@
 
 .progress-bar {
     height: 30px;
-    background-color: #ddd; /* color for the unfilled part */
+    background-color: whitesmoke; /* color for the unfilled part */
     border-radius: 10px;
     position: relative;
 }
@@ -39,12 +54,15 @@
 
 /*FOR MOBILE SCREENS*/
 @media (max-width: 767px) {
-
+    .container.pokemon-bottom {
+        padding: 20px 0px;
+    }
     .pokemon-bottom {
         flex-direction: column;
     }
-    .pokemon-bottom h2 {
-        margin-bottom: -20px;
+    .stats-title {
+        margin-left: 0;
+        margin-bottom: -30px;
     }
     .pokemon-stats {
         width: 90%;
