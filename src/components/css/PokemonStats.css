@@ -1,7 +1,18 @@
+.container.pokemon-bottom {
+    max-width: 800px;
+    margin-bottom: 50px;
+    width: 95%;
+}
+
 .pokemon-bottom {
     display: flex;
     gap: 50px;
     align-items: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
 }
 
 .pokemon-stats {
@@ -9,7 +20,6 @@
     flex-direction: column;
     gap: 20px;
     flex: 1;
-    margin-bottom: 50px;
 }
 
 .stat-group {
@@ -26,7 +36,7 @@
 
 .progress-bar {
     height: 30px;
-    background-color: #ddd; /* color for the unfilled part */
+    background-color: whitesmoke; /* color for the unfilled part */
     border-radius: 10px;
     position: relative;
 }

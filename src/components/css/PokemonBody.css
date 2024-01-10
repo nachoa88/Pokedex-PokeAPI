@@ -1,32 +1,50 @@
-.button-next-previous {
-    display: flex;
-    justify-content: space-between;
+.container.pokemon-top {
+    max-width: 800px;
+    width: 95%;
 }
 
-.button-next-previous button {
-	border: none;
-	border-radius: 25px;
-    padding: 15px 30px;
+.divider {
+    border-top: 3px solid var(--color-primary);
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.previous-button, .next-button {
+    border: none;
+    padding: 10px 30px;
 	letter-spacing: 2px;
 	font-family: inherit;
 	background-color: var(--color-primary);
 	color: #f2f2f2;
-	cursor: pointer;
+    height: 50px;
+    width: 140px;
 }
 
-.button-next-previous button:hover {
-	background-color: var(--color-primary-hover);
-	color: #000000;
+.previous-button {
+    border-radius: 20px 0 0 0;
 }
 
-.button-next-previous button:disabled {
+.next-button {
+    border-radius: 0 20px 0 0;
+}
+
+.previous-button:hover, .next-button:hover {
 	background-color: var(--color-primary-hover);
-	color: #000000;
+	color: black;
+}
+
+.previous-button:disabled, .next-button:disabled {
+	background-color: var(--color-primary-hover);
+	color: black;
+    cursor: not-allowed;
 }
 
 .pokemon-number {
-    font-size: 20vw;
-    font-size: clamp(24px, 20vw, 180px); /* New line: font size will be at least 24px and at most 180px */
+    font-size: clamp(24px, 15vw, 150px); /* New line: font size will be at least 24px and at most 150px */
     font-weight: 700;
     color: var(--color-primary);
     opacity: 70%;
@@ -39,7 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 0;
 }
 
 .pokemon-img img {
@@ -48,11 +66,20 @@
     object-fit: contain;
 }
 
+.small-card{
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
+}
+
 .pokemon-description {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    padding: 0;
 }
 
 .pokemon-page-name {
