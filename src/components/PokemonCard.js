@@ -14,7 +14,7 @@ function PokemonCard({ pokemon }) {
 	}
 
 	return (
-		<Link to={`/pokemon/${pokemon.name}`} className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" id="card-body">
+		<Link to={`/pokemon/${pokemon.name}`} className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 card-body" id={pokemon.name}>
 			<div className="card-pokemon">
 				<div className="card-img">
 					{/*In JavaScript, we cannot write 'official-artwork' because '-' gives problems, other sprites: other.dream_world.front_default*/}

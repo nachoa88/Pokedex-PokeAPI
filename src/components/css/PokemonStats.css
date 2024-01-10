@@ -4,6 +4,11 @@
     width: 95%;
 }
 
+.stats-title {
+    font-size: x-large;
+    margin-left: 15px;
+}
+
 .pokemon-bottom {
     display: flex;
     gap: 50px;
@@ -26,7 +31,7 @@
     display: grid;
     align-items: center;
     gap: 20px;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 20% auto 8%;
 }
 
 .stat-group span {
@@ -49,12 +54,15 @@
 
 /*FOR MOBILE SCREENS*/
 @media (max-width: 767px) {
-
+    .container.pokemon-bottom {
+        padding: 20px 0px;
+    }
     .pokemon-bottom {
         flex-direction: column;
     }
-    .pokemon-bottom h2 {
-        margin-bottom: -20px;
+    .stats-title {
+        margin-left: 0;
+        margin-bottom: -30px;
     }
     .pokemon-stats {
         width: 90%;

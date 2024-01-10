@@ -4,11 +4,11 @@ function PokemonAbilities({ pokemonData }) {
 
     return (
         <div className="container pokemon-middle">
-            <h3 className="experience-text">Base Experience: {pokemonData.base_experience}</h3>
+            <p className="experience-text">Base Experience: {pokemonData.base_experience}</p>
 
             <div className="row">
                 <div className="col-12 col-lg-3 col-sm-3">
-                    <h3 className="ability-title">Abilities</h3>
+                    <p className="ability-title">Abilities</p>
                 </div>
 
                 <div className="col-12 col-lg-9 col-sm-9">

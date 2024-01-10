@@ -4,7 +4,7 @@ function PokemonStats({ pokemonData }) {
 
     return (
         <div className="container pokemon-bottom">
-            <h3>Stats</h3>
+            <p className="stats-title">Stats</p>
             <div className="pokemon-stats">
                 <div className="stat-group">
                     <span>Hp</span>

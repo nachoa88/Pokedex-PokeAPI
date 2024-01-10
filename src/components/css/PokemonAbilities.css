@@ -40,6 +40,7 @@
     margin-bottom: 0;
     display: flex;
     justify-content: center;
+    font-size: x-large;
 }
 
 @media (max-width: 576px) { /* adjust breakpoint as needed */
