@@ -1,0 +1,10 @@
+services:
+  react-app:
+    container_name: react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/pokedex-pokeapi
+    ports:
+      - "3000:3000"
