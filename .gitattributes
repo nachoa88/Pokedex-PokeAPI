@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+# Add specific diff drivers if you have files that benefit from them
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.js diff=javascript
+*.jsx diff=javascript
+*.json diff=json
+*.ts diff=typescript
+*.tsx diff=typescript
