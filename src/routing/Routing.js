@@ -20,7 +20,7 @@ function Routing() {
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path='/' element={<HomePage />} />
+                <Route index element = {<HomePage />} />
                 <Route path='/pokemon/:pokemonName' element={<PokemonPage />} />
             </Routes>
             <Footer />
